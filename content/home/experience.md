@@ -19,10 +19,10 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  company = "MEDINREAL BV"
+  company_url = "https://www.medinreal.com/"
+  location = "Nijmegen, NL"
+  date_start = "2016-12-31"
   date_end = ""
   description = """
   Responsibilities include:
