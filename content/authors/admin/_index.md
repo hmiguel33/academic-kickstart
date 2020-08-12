@@ -28,11 +28,11 @@ interests:
 
 education:
   courses:
-  - course: Ph.D. in Applied Mathematics (Signal processing for Mobile communications)
+  - course: Ph.D. in Applied Mathematics
     institution: Université Nice Sophia Antipolis, France
     year: 2014
-  - course: M.Sc. 
-    institution: Université Nice Sophia Antipolis, France
+  - course: M.Sc. in Applied Mathematics
+    institution: Polytech Nice Sophia Antipolis, France
     year: 2010
   - course: B.Sc. in Computer Sciences
     institution: Universidad Autónoma del Estado de Morelos
@@ -52,12 +52,12 @@ social:
 #- icon: google-scholar
 #  icon_pack: ai
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-- icon: github
-  icon_pack: fab
-  link: https://github.com/miguelhisojo
-- icon: LinkedIn
+- icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/hisojomiguel/
+- icon: github
+  icon_pack: fab
+  link: https://github.com/miguelhisojo  
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
