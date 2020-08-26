@@ -48,7 +48,7 @@ slides: ""
 ## An FSK simulation
 
 
-Mobile phones, internet access, and to listening music on the radio are normal activities for most of us. When any of those activities take place, we impose a data signal wave over a carrier signal wave, generally of higher frequency. This process is called modulation.
+Mobile phones, internet access, and listening the radio, those are normal activities for most of us. When any of those activities take place, we impose a data signal wave over a carrier signal wave, generally of higher frequency. This process is called modulation.
 
 Digital Modulation provides more information capacity, high data security, quicker system availability with great quality communication.
 
@@ -156,8 +156,9 @@ pl.ylabel('Amplitude (V)')
 pl.title('Amplitude of carrier vs time')
 
 ```
-
+```
     12800
+```
 
 {{< figure src="FSK_6_2.png" title="Amplitude of carrier vs time" numbered="true" >}}
 
@@ -171,7 +172,10 @@ frequency is halfway between the mark and space frequencies.
 Frequency Shift Property of the Fourier Transform:
 
 $$
-\mathscr F [x(t) \cos (2\pi f_c t)] = \frac{1}{2} X (f-f_c) + \frac{1}{2} X (f+f_c)
+\begin{aligned}
+\mathscr F \left[ x(t) \cos (2\pi f_c t) \right] =  \frac{1}{2} X (f-f_c) + \\\\
+                                    \frac{1}{2} X (f+f_c)
+                                      \end{aligned}
 $$
 
 
@@ -296,14 +300,19 @@ Our receiver will take concepts from *analog FM*, which can be demodulated by co
 Typically, FSK demodulation utilizes an analog differentiator in order to separate the data signal from the carrier frequency, followed by an envelope detector. This procedure is simple and low-power consuming.
 
 $$
-\frac{dy}{dt} = -A 2\pi \left ( f + m(t) + t * \frac{d m(t)}{dt} \right) \sin (2 \pi (fc + m(t)) * t )+ \frac{d n(t)}{dt}
+\begin{aligned}
+\frac{dy}{dt} = -A 2\pi \left ( f + m(t) + t * \frac{d m(t)}{dt} \right) \\\\
+     \sin (2 \pi (fc + m(t)) * t )+ \frac{d n(t)}{dt}
+\end{aligned}
 $$
 
 
 Combining the amplitudes in one term and taking into account that the term $\frac{d m(t)}{dt} = 0$ due to the constant phase change we have:
 
 $$
-\frac{dy}{dt} = A 2\pi \left ( f + m(t)  \right) \sin (2 \pi (fc + m(t)) * t )+ \frac{d n(t)}{dt}
+\begin{split}
+\scriptstyle \frac{dy}{dt} =  A\ 2 \pi \left ( \ f + m(t) \ \right ) \cdot \  \sin (2 \pi (\ fc + m(t) \ )\  * \ t ) +  \frac{d n(t)}{dt}
+\end{split}
 $$
 
 In our simulation, we can ignore the phase shift, since it is constant. Nevertheless, in real life, a clock recovery or bit synchronization scheme must be applied. The differentiator is simple and is just a discrete differentiation function, it can be implemented as:
@@ -321,7 +330,7 @@ print(y)
 
 
 The envelope detector separates the high-frequency carrier from the low-frequency digital data modulated onto the amplitude, this is done by using a Hilbert transform. 
-After the envelope detection, the signal is low-pass filtered using a 100 tap FIR filter with a cutoff frequency of $2*bitrate$.
+After the envelope detection, the signal is low-pass filtered using a 100 tap FIR filter with a cutoff frequency of $2 \* bitrate$.
 
 
 ```python
